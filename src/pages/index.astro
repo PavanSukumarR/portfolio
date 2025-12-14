@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
+import Contact from "../components/Contact.astro";
+import Skills from "../components/Skills.astro";
+
+const projects = [
+  { 
+    title: "Pneumonia Detection with Deep Learning", 
+    description: "This project aims to detect pneumonia using the CNN model. By training a model with different datasets containing chest x-rays of normal people and pneumonia people, the model will differentiate between normal condition and pneumonia condition when user input is given.", 
+    link: "#" 
+  },
+  { 
+    title: "Credit Card Fraud Detection with Machine Learning", 
+    description: "The purpose of this project is to detect fraud using the SVM model. We train the model with different datasets which contain details of different individual persons. When user input is given the model will detect whether it is fraudulent or not.", 
+    link: "#" 
+  },
+];
+---
+
+<BaseLayout>
+  <Hero />
+  <Skills />
+  <Projects projects={projects} />
+  <Experience />
+  <Contact />
+</BaseLayout>
